@@ -1,0 +1,241 @@
+body,
+html {
+  height: 100%;
+  min-width: 1000px;
+  overflow: hidden;
+}
+.section {
+  overflow: hidden;
+}
+/* 第一屏 */
+.one .logo {
+  width: 251px;
+  height: 186px;
+  background-image: url('../images/1_logo.png');
+  margin: 80px auto;
+}
+.one .text {
+  text-align: center;
+}
+.one .text img {
+  margin: 0 30px;
+  opacity: 0.2;
+}
+.one.now .text img {
+  margin: 0;
+  opacity: 1;
+  transition: all 1s;
+}
+.one .info {
+  width: 772px;
+  height: 49px;
+  background-image: url('../images/1_info.png');
+  margin: 20px auto;
+}
+/* 第二屏 */
+.two {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.two .info {
+  width: 635px;
+  height: 309px;
+  background-image: url('../images/2_info_2.png');
+}
+.two .shield {
+  width: 450px;
+}
+.two .shield img:nth-child(1) {
+  transform: translate(35px, 78px) rotate(45deg);
+}
+.two .shield img:nth-child(2) {
+  transform: translate(135px, 282px) rotate(15deg);
+}
+.two .shield img:nth-child(3) {
+  transform: translate(187px, 62px) rotate(15deg);
+}
+.two .shield img:nth-child(4) {
+  transform: translate(10px, 162px) rotate(30deg);
+}
+.two .shield img:nth-child(5) {
+  transform: translate(300px, -22px) rotate(70deg);
+}
+.two .shield img:nth-child(6) {
+  transform: translate(480px, 62px) rotate(90deg);
+}
+.two .shield img:nth-child(7) {
+  transform: translate(180px, -305px) rotate(80deg);
+}
+.two .shield img:nth-child(8) {
+  transform: translate(280px, -322px) rotate(60deg);
+}
+.two.now .shield img {
+  transform: none;
+  transition: transform 1s;
+}
+/* 第三屏 */
+.three {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.three .info {
+  width: 631px;
+  height: 278px;
+  background-image: url('../images/3_info_3.png');
+}
+.three .circle {
+  width: 453px;
+  height: 449px;
+  background-image: url('../images/3_circle.png');
+  position: relative;
+}
+.three .circle .rocket {
+  width: 203px;
+  height: 204px;
+  background-image: url('../images/3_rocket.png');
+  position: absolute;
+  left: 110px;
+  top: 110px;
+  transform: translate(-1500px, 800px);
+}
+.three.now .rocket {
+  transform: none;
+  transition: all 1s;
+}
+/* 第四屏 */
+.four {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.four .movie {
+  width: 529px;
+  height: 500px;
+}
+.four .info {
+  width: 612px;
+  height: 299px;
+  background-image: url("../images/4_info_4.png");
+}
+.four .search {
+  width: 529px;
+  height: 66px;
+  background-image: url("../images/4_search.png");
+  position: relative;
+  transform: translateX(-1000px);
+}
+.four .search .key {
+  width: 0;
+  height: 22px;
+  background-image: url("../images/4_key.png");
+  position: absolute;
+  left: 22px;
+  top: 22px;
+}
+.four.now .search {
+  transform: none;
+  transition: all 1s;
+}
+.four.now .search .key {
+  width: 99px;
+  transition: all 2s 1s steps(5);
+}
+.four .result {
+  width: 529px;
+  height: 0;
+  transform: translateY(-18px);
+  background-image: url("../images/4_result.png");
+}
+.four.now .result {
+  height: 372px;
+  transition: all 1s 3.5s;
+}
+/* 第五屏 */
+.five {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.five .info {
+  width: 1077px;
+  height: 134px;
+  background-image: url("../images/5_info_5.png");
+}
+.five .browser {
+  width: 1044px;
+  height: 443px;
+  background-color: rgba(255, 255, 255, 0.3);
+  position: relative;
+}
+.five .line_top,
+.five .line_bottom,
+.five .line_center {
+  height: 1px;
+  width: 100%;
+  background-color: #fff;
+  position: absolute;
+  left: 0;
+}
+.five .line_center {
+  bottom: 30px;
+}
+.five .line_top {
+  top: 0;
+  transform: translateX(100%);
+}
+.five .line_bottom {
+  bottom: 0;
+  transform: translateX(-100%);
+}
+.five .line_left,
+.five .line_right {
+  width: 1px;
+  height: 100%;
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+}
+.five .line_left {
+  left: 0;
+  transform: translateY(-100%);
+}
+.five .line_right {
+  right: 0;
+  transform: translateY(100%);
+}
+.five .toolbar {
+  /* width: 1004px; 最终状态 */
+  height: 79px;
+  background-image: url("../images/5_toolbar.png");
+  position: relative;
+  width: 0;
+  overflow: hidden;
+}
+.five .extra {
+  width: 294px;
+  height: 29px;
+  background-image: url("../images/5_extra.png");
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.five .line_box {
+  width: 926px;
+  height: 27px;
+  border: 1px solid #fff;
+  box-sizing: border-box;
+  position: absolute;
+  left: 75px;
+  top: 30px;
+}
+.five.now div[class^='line'] {
+  transform: none;
+  transition: all 1s;
+}
+.five.now .toolbar {
+  width: 1004px;
+  transition: all  2s 1s;
+}
